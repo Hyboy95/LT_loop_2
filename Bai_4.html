@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_4</title>
+</head>
+<body>
+<!--<input type="text" id="length" placeholder="Nhập vào chiều dài hình chữ nhật">-->
+<!--<input type="text" id="width" placeholder="Nhập vào chiều rộng hình chữ nhật">-->
+<!--<button id="btn">Print</button>-->
+</body>
+</html>
+<script>
+
+    // let btn = document.getElementById('btn');
+    // btn.addEventListener('click', on_click)
+    //
+    // function on_click() {
+    //     let a = +document.getElementById('width').value;
+    //     let b = +document.getElementById('length').value;
+        for (let i = 1; i <= 7; i++) {
+            document.write("<br>");
+            for (let j = 1; j <= 21 ; j++) {
+                if (i === 1 || i === 7 ){
+                    document.write("*");
+                } else if ( j === 1 || j === 21){
+                    document.write("*");
+                } else document.write("&nbsp&nbsp");
+            }
+        }
+
+</script>

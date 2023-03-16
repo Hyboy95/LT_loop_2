@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_1</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+  let n = +prompt( "Nhập vào n số hạng của dãy Fibonacci")
+  if (Number.isInteger(n) && n > 2) {
+      let a = 0;
+      let b = 1;
+      let text = '0,1'
+      for (let i = 0; i < (n-2); i++) {
+          let c = a + b;
+          text += "," + c;
+          a = b;
+          b = c;
+      }
+      document.write( `${n} số đầu tiên thuộc dãy Fibonacci là ${text}`);
+  } else {
+      document.write( `Vui lòng nhập lại`);
+  }
+</script>

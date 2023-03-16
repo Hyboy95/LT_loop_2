@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_2</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+  let n = +prompt( "Nhập vào số nguyên n");
+  if (Number.isInteger(n) && n > 0) {
+    let factorial = 1;
+    for (let i = 1; i <= n; i++) {
+      factorial *= i;
+    }
+    document.write( `Giai thừa của số ${n} là ${factorial}`);
+  } else {
+    document.write( `Vui lòng nhập lại`);
+  }
+</script>

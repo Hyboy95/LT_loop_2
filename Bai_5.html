@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_5</title>
+</head>
+<body>
+<p>Tính lãi kép (lãi mẹ đẻ lãi con):</p>
+<input id="money" type="text" placeholder="Nhập vào tiền vay ban đầu của bạn (VND)" style="margin-bottom: 10px; width: 300px"><br>
+<input id="interest_rate" type="text" placeholder="Nhập vào lãi suất gửi tiền hàng tháng (%)" style="margin-bottom: 10px; width: 300px"><br>
+<input id="month_number" type="text" placeholder="Nhập vào số tháng vay (tháng)" style="margin-bottom: 10px; width: 300px"><br>
+<button id="btn" style="cursor: pointer">Kiểm tra</button>
+<p id="result"></p>
+</body>
+</html>
+<script>
+    let btn = document.getElementById('btn');
+    let result = document.getElementById('result');
+
+    btn.addEventListener('click', function () {
+        let m = +document.getElementById('money').value;
+        let a = +document.getElementById('interest_rate').value;
+        let n = +document.getElementById('month_number').value;
+        // let i = 1;
+        // let interest = 0;
+        // while (i <= n) {
+        //     interest += m * (a/100);
+        //     m += interest;
+        //     i++;
+        // }
+        // let x =  m * Math.pow((1 + a), n);
+        // result.innerHTML = `Số tiền lãi phải trả sau ${n} tháng của bạn là ${x}`;
+
+        // let total = m;
+        for (let i = 0; i < n; i++) {
+            m = m + m*a;
+        }
+        result.innerHTML = `Số tiền phải tra sau ${n} tháng là ${m}`
+    })
+</script>
